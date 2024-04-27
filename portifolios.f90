@@ -67,7 +67,7 @@
         end do
 
 
-!       ORGANIZANDO O PREÇO DO OPERACIONAL PARA CADA DIA OPERAVEL
+!       ORGANIZANDO PARA CADA DIA OPERAVEL
         results = 0.0
 
         do i = 1,totalDIAS
@@ -112,7 +112,7 @@
 
 
 
-!       CALCULANDO OS RETORNOS LOGARITMICOS
+!       CALCULANDO OS RETORNOS
         do i = 2,totalDIAS
 
         retorno(1,i-1) = results(1,i)
@@ -140,7 +140,7 @@
                    retorno(5,i)
         enddo
 
-!       DESVIO PADRÂO
+!       DESVIO PADRAO
         do i = 4,5
         suma = 0.0
         do j = 1,(totalDIAS-1)
@@ -194,7 +194,7 @@
 
 
 
-!       MC: Escolhendo aleatóriamente os portifólios
+!       MC: Escolhendo aleatoriamente os portifolios
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !       Porcentagens Iguais
 
@@ -218,7 +218,7 @@
         end do
 
         !volatilidade e retorno anual, multiplica a diaria por 252
-        vola = sqrt(sumvola)!*sqrt(252.0)
+        vola = sqrt(sumvola)
         EPoRe = EPoRe*252.0
         
         ISharpe = (EPoRe - 0.0)/vola
@@ -250,7 +250,7 @@
         end do
 
         !volatilidade e retorno anual, multiplica a diaria por 252
-        vola = sqrt(sumvola)!*sqrt(252.0)
+        vola = sqrt(sumvola)
         EPoRe = EPoRe*252.0
 
         ISharpe = (EPoRe - 0.0)/vola
@@ -261,7 +261,7 @@
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!       Aleatórias
+!       Aleatorias
         NA1 = 1000
         do na = 1,NA1
 
@@ -296,7 +296,7 @@
         end do
 
         !volatilidade e retorno anual, multiplica a diaria por 252
-        vola = sqrt(sumvola)!*sqrt(252.0)
+        vola = sqrt(sumvola)
         EPoRe = EPoRe*252.0
 
         ISharpe = (EPoRe - 0.0)/vola
